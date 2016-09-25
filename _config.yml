@@ -17,7 +17,7 @@ title: nerds at meter.md
 # email: angry-nerds@meter.md
 description: >
   The ranting grounds of the meter.md engineering group.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "https://nerds.meter.md" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: meter_md
 github_username:  metermd
