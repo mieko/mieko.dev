@@ -2,7 +2,7 @@
 layout: post
 title:  "pgpool-ii in Practice"
 date:   2016-09-24 15:52:14 -0400
-categories: postgres infrastructure mieko
+categories: infrastructure
 ---
 
 pgpool-ii is awesome.  We don't have it in production yet, but have a staging
@@ -34,3 +34,5 @@ ready for it.  Here's a few tips:
      stunnel → postgres.
 
   6. [Just work off of these hard-fought stunnel configs.](https://gist.github.com/mieko/a075f9ce8cb8fd5c68fed310acebe449)
+
+-- mieko
