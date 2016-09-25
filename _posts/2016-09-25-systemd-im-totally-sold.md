@@ -96,9 +96,11 @@ I don't get the argument that systemd is desktop-centric.  On Linux desktops,
 I could literally never touch the init system and get by fine not caring.  On
 servers, I'm using for really useful stuff constantly.
 
-I don't give a shit about what it does on a desktop. I do know that I'd trade
-a decent amount of niceties on macOS to get systemd instead of the "can't force
-myself to clutter my thoughts with this" launchd[^launchd].
+I don't give a shit about what it does on a desktop.  I don't care about
+startup time: we kill and image nodes 5x as often as we reboot them.  From a
+manageability standpoint, though, I do know that I'd trade a decent amount of
+niceties on macOS to get systemd instead of the "can't force myself to clutter
+my thoughts with this" launchd[^launchd].
 
 [^launchd]:
     Please don't bring launchd into the BSDs.  There, we need something
