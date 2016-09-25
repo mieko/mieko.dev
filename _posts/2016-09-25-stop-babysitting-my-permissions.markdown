@@ -7,7 +7,7 @@ categories: infra
 ---
 The traditional Unix permission bits aren't that complicated:
 
-User, Group, Other.
+User, Group, Other.  
 Read, Write, eXecute.[^1]
 
 They've been successful because they allow you to express a lot of scenarios
@@ -82,11 +82,11 @@ Unix permissions don't give us lot of options here: don't take away the few it
 [^1]:
     We'll ignore sticky/set[gu]id/search to keep this on-point.
 
-[^2]
+[^2]:
     I know there are a lot of Sheldons screaming about ACLs, and that you need
     a Turing-complete algebraic expression engine to properly express effective
     permissions in the real world.
 
 [^3]:
     Soft link permissions are generally ignored in normal situations.
-    Hard links cannot cross file system boundaries.
+    Hard links cannot cross filesystem boundaries.
