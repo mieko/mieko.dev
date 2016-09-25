@@ -67,6 +67,10 @@ article.post {
   max-width: 40em !important;
 }
 
-.footnotes {
+.small, .footnotes {
   font-size: 80%;
+}
+
+.more {
+  color: $grey-color-dark;
 }
