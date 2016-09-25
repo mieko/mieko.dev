@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introducing Angry Nerds"
+title:  "Introducing the Nerds"
 date:   2016-09-24 15:52:14 -0400
 categories: meta
 ---
