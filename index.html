@@ -16,10 +16,8 @@ layout: default
         </h2>
 
         {% if post.excerpt %}
-            <div class="small">
-              {{ post.excerpt}}
-              <a class="more" href="{{ post.url | prepend: site.baseurl }}">More? [Y/n]</a>
-            </div>
+          {{ post.excerpt}}
+          <a class="small more" href="{{ post.url | prepend: site.baseurl }}">More? [Y/n]</a>
         {% endif %}
       </li>
     {% endfor %}
