@@ -145,6 +145,7 @@ particulars?  Simple: a fucking 500 line init script that ends up looking
 a *lot* like sysvinit.
 
 The complexity systemd's "overreaching bloat" handles is our complexity now.  
+
 And our implementation won't be as battle-tested.  
 
 And it'll be written in bash.
