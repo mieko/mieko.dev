@@ -8,13 +8,13 @@ author: mieko
 
 pgpool-ii is awesome.  We don't have it in production yet, but have a staging
 environment and have run it through production-scale loads, and are getting
-ready for it.  Here's a few tips:
+ready.  Here's a few tips:
 
   1. *Pretend it doesn't support SSL at all.*  On the frontend-side, it has no
      hostname mapping (e.g., `hostssl ... cert clientcert=1`, etc).  On the
-     backend side, it has no way to specify a separate SSL certificate/key than
-     the front-end, has no way to specify something like `sslmode=verify`, and
-     doesn't use libpq, so it doesn't support configured conninfo strings or
+     backend side, it has no way to specify a separate SSL key pair than
+     the front-end, has no way to force things like `sslmode=verify`, and doesn't 
+     use libpq, so it doesn't support configured conninfo strings or
      environment variables.  Just wrap it in stunnel.  On both sides.  Yeah.
 
   2. Since you've now got pgpool operating on local sockets, you'd think you
