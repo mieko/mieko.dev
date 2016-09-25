@@ -16,7 +16,7 @@ it seemed like everyone hated it.
 
 Circa 2000 or so, I wrote, but never released, a dependency-based half-assed
 init called finitd (in C, totally unrelated to the Python utility that a web
-search will find you).  It did the notify-pid-0-via-a-socket-thing that was
+search will find you).  It did the notify-pid-1-via-a-socket-thing that was
 managed by client programs talking to the daemon.  I had utilities called cute
 things like `wants` and `needs` and `provides` that were placed at the
 beginning of the init script's `$PATH` before it was executed.  They'd notify
@@ -79,8 +79,8 @@ I write systemd units like I edit config files.  I write scripts that generate
 systemd units.  These are things I avoided with sysvinit and /etc/rc for years.
 
 On the other side, these days I write my daemons like a normal program without
-any gymnastics.  I run in the foreground.  I only fork when I *need* to fork.  
-I don't have flags like `--detach` or `--no-daemon` or `--foreground`.  
+any gymnastics.  I run in the foreground.  I only fork when I *need* to fork.
+I don't have flags like `--detach` or `--no-daemon` or `--foreground`.
 I don't `syslog()`, I log messages to STDOUT and STDERR.  I don't create a
 pidfile.  I exit with a return code from main like the prophets Ken and Dennis
 intended.  I don't `chroot` or `setuid` for security.  I don't load a
@@ -103,15 +103,19 @@ niceties on macOS to get systemd instead of the "can't force myself to clutter
 my thoughts with this" launchd[^launchd].
 
 [^launchd]:
-    Please don't bring launchd into the BSDs.  There, we need something
-    declarative and more modern, but not launchd as-is.  If I were tasked with
-    solving this, I'd start from the systemd Unit file format and work myself
-    backward.  The language has the right balance of simplicity, and enough outs
-    and options to actually express the zoo of services you'd actually need to
-    handle.
+    Please don't bring launchd as it exists on macOS into the BSDs.  There, we
+    need something declarative and more modern, but not launchd as-is.  I've
+    been told the "problem with launchd" is actually "the problem with
+    launchctl" which does the crazy XML thing.
+
+    If I were tasked with solving this, I'd start from the systemd Unit file
+    format and work myself backward.  The language has the right balance of
+    simplicity, and enough outs and options to actually express the zoo of
+    services you'd actually need to handle.
 
     Of course, because surely someone will come up with *obviously superior*
-    nouns, verbs, and comma placements, this will never happen.
+    nouns, verbs, and comma placements, this will never happen, and I'll (not?)
+    be writing writing two service descriptions in 20X6.
 
 
 systemd is bigger than some people like, and I haven't even touched on timers

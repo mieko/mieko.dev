@@ -25,3 +25,6 @@ github_username:  metermd
 # Build settings
 markdown: kramdown
 theme: minima
+
+kramdown:
+  footnote_backlink: ' ^^ '
