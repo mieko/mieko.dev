@@ -65,8 +65,7 @@ There are a few things in Unix that hung around just way too long.  The tty/pty/
 terminal abstraction needs to be stripped down to the parts that are still
 useful.  crond should've been replaced long before systemd had a chance to take
 it on.  The `fork(), fork(), setsid()` dance and `daemon()` should've been long
-dead, because we should've had supervisors as smart as systemd years 20 years
-ago.
+dead, because we could've had supervisors as smart as systemd 20 years ago.
 
 A few days ago, during the middle of task, I naturally just had the thought:
 "...and now I'll just write a quick systemd unit for that."
