@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stop Babysitting my Permissions"
+title: "Stop Babysitting My Permissions"
 date: "2016-09-25 15:53:00 -0400"
 author: mieko
 categories: infra
