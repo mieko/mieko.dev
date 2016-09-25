@@ -20,8 +20,8 @@ read"*.  But those don't pop up as often as I would've guessed.  I can live
 with it.[^2]
 
 Anyway, these permissions are there so we can control access to files in a
-more granular way than yes/no or "is this my file?" way.  The group ids and
-group permission sets are a useful tool for a lot of models.
+more granular way than yes/no or "is this my file?".  The group ids and group
+permission sets are a useful tool for a lot of models.
 
 But even with the limited permissions Unix allows me to express, my biggest
 permission headache has nothing to do with it.  It's shit like this:
@@ -46,12 +46,13 @@ The group in question that has a `+r` is `postgres-client`.  I may want to
 add users to that group to give them access to the keys.  You know, like what
 Unix permissions were designed to do.  
 
-Like the examples *exactly like this* in textbooks that explain users and
-groups and permissions.
+You know, like the examples *exactly like this* in textbook chapters that
+explain how users, groups, and permissions work, and when you'd want to set
+group permissions.
 
 Invariably, these are fatal, with no switch like
-`--im-using-permissions-as-designed-not-because-im-stupid` override switch.  Or
-you get a blunt "just turn off all security for everything forever" flag.
+`--im-using-permissions-as-designed-not-because-im-stupid` override switch, or
+better, an environment variable that can be set once.
 
 Instead, I now have to script brainless tools like this, and decide where to
 put them in the provision process:
@@ -64,6 +65,7 @@ if [ ! -f "$USER_KEY" ] || ! cmp -s "$USER_KEY" "$GLOBAL_KEY" ; then
   chown "$USER" "$USER_KEY"
   chmod u=rw,g=,o= "$USER_KEY"
 fi
+export USER_KEY=...
 ```
 
 All of this is to basically convince OpenSSH and PostgreSQL that I'm not

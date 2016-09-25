@@ -4,6 +4,7 @@ title: "systemd: I'm Totally Sold"
 date: "2016-09-25 10:07:00 -0400"
 categories: infra
 author: mieko
+comments: false
 ---
 
 I've been out of the "devops" game for a while, since it was just called
