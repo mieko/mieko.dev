@@ -15,12 +15,14 @@ lot had changed: sysvinit was dead, upstart had came and gone, systemd won, but
 it seemed like everyone hated it.
 
 Circa 2000 or so, I wrote, but never released, a dependency-based half-assed
-init called finitd.  It did the notify-pid-0-via-a-socket-thing that was managed
-by client programs talking to the daemon.  I had utilities called cute things
-like "wants" and "needs" and "provides" that were placed at the beginning of the
-init script's `$PATH` before it was executed.  The scripts ended up about as
-readable as a script-based solution could be, a typical service like Apache
-being less than a screen-full of code.
+init called finitd (in C, totally unrelated to the Python utility that a web
+search will find you).  It did the notify-pid-0-via-a-socket-thing that was
+managed by client programs talking to the daemon.  I had utilities called cute
+things like "wants" and "needs" and "provides" that were placed at the
+beginning of the init script's `$PATH` before it was executed.  They'd notify
+and and block as required.  The scripts ended up about as readable as a
+script-based solution could be, a typical service like Apache being less than
+a screen-full of code.
 
 I didn't have cgroups or dbus, and I had the notion that it'd be Unix-
 portable, so I got to avoid those decisions.  I had converted my SuSE machine
