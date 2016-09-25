@@ -17,7 +17,7 @@ situation with them.
 You do hit the limitations of the scheme, though: There are times where you
 think: *"Man, I wish this group could write, but this other group could only
 read"*.  But those don't pop up as often as I would've guessed.  I can live
-with it, I guess.[^2]
+with it.[^2]
 
 Anyway, these permissions are there so we can control access to files in a
 more granular way than yes/no or "is this my file?" way.  The group ids and
