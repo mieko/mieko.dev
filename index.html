@@ -17,7 +17,7 @@ layout: default
 
         {% if post.excerpt %}
             <div class="small">
-              {{ post.excerpt | append "..." }}
+              {{ post.excerpt}}
               <a class="more" href="{{ post.url | prepend: site.baseurl }}">More? [Y/n]</a>
             </div>
         {% endif %}
