@@ -56,8 +56,8 @@ stupid reversal of how I guessed it'd turn out.
 
 Even after I factor in suppliers for a case and AC adapter, if C.H.I.P., or
 something similar, plays out, I think I could get an *actually smart* "beacon"
-into production at two-thirds-is the cost of what's available on the turn-key
-BLE Beacon market.
+into production at around two-thirds the cost of what's available on the
+turn-key BLE Beacon market.
 
 (Everybody calls their beacons smart.  They're not.  A "smart" beacon could do
 at least part of what's possible with these SBCs with a BLE chip: *notice the
