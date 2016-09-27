@@ -9,7 +9,7 @@ author: mieko
 I just pre-ordered a handful of the new [C.H.I.P.](https://getchip.com/pages/chip)
 single board computers to experiment with.
 
-I've played-with and prototyped-on different single-board, Linux computers
+I've played-with and prototyped-on different single-board Linux computers
 for years, but the game changers here are:
 
   1. $9USD/ea in quantities of **ONE**, with:
