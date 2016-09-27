@@ -26,10 +26,14 @@ we were working on.  We bought dozens of beacons to develop against from 4-5
 manufacturers at $20/$30 each, betting that the price would end up in the $5-$10
 range soon enough, through adoption and competition.
 
-Two years later, the beacons that work reliably, are field programmable, have a
-useful battery life, and are ready-to-use out-of-the-box still cost around
-$20-$30USD/each[^1].  One of our customer installations can have over a hundred
-beacons.
+Two years later, the beacons that:
+  1. Work reliably
+  2. Are field programmable
+  3. Have a useful battery life, (10 months is OK)
+  4. Are ready-to-use out-of-the-box (no soldering or firmware programming)
+
+Still cost around $20-$30USD/each[^1].  One of our customer installations can
+have over a hundred beacons.
 
 We don't make money on beacons: we just want our customers to have them.  Our
 software can do all sorts of cool stuff if they're installed.  I've spent hours
