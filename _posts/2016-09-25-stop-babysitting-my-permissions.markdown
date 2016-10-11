@@ -7,24 +7,24 @@ categories: infra
 ---
 The traditional Unix permission bits aren't that complicated:
 
-User, Group, Other.  
+User, Group, Other.
 Read, Write, eXecute.[^1]
 
 They've been successful because they allow you to express a lot of scenarios
-without getting crazy-complicated.  It's hard to create an incomprehensible
+without getting crazy-complicated. It's hard to create an incomprehensible
 situation with them.
 
 You do hit the limitations of the scheme, though: There are times where you
 think: *"Man, I wish this group could write, but this other group could only
-read"*.  But those don't pop up as often as I would've guessed.  I can live
+read"*. But those don't pop up as often as I would've guessed. I can live
 with it.[^2]
 
 Anyway, these permissions are there so we can control access to files in a
-more granular way than yes/no or "is this my file?".  The group ids and group
+more granular way than yes/no or "is this my file?". The group ids and group
 permission sets are a useful tool for a lot of models.
 
 But even with the limited permissions Unix allows me to express, my biggest
-permission headache has nothing to do with it.  It's shit like this:
+permission headache has nothing to do with it. It's shit like this:
 
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
@@ -42,9 +42,9 @@ And then this:
     psql: private key file "/etc/ssl/metermd/postgres-client.key" has group or
           world access; permissions should be u=rw (0600) or less
 
-The group in question that has a `+r` is `postgres-client`.  I may want to
-add users to that group to give them access to the keys.  You know, like what
-Unix permissions were designed to do.  
+The group in question that has a `+r` is `postgres-client`. I may want to
+add users to that group to give them access to the keys. You know, like what
+Unix permissions were designed to do.
 
 You know, like the examples *exactly like this* in textbook chapters that
 explain how users, groups, and permissions work, and when you'd want to set
@@ -74,7 +74,7 @@ fucking up.
 This also means I end up with a handful of copies of keys scattered around with
 different owners that I have to chase during key rotation.[^3]
 
-I get what the motivation is, and a warn-by-default would be OK.   But stop it.
+I get what the motivation is, and a warn-by-default would be OK.  But stop it.
 
 Unix permissions don't give us lot of options here: don't take away the few it
 *does* give us.

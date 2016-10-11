@@ -126,11 +126,11 @@ to be an engineering trade-off: it can be man-power, feature priorities, or
 choosing an architecture that sucks for edge cases but optimizes for ecosystem.
 
 [^1]:
-  This is inspired by a recent event where Atom got ultra slow: I pasted a 15KB
-  single-line of Base64-encoded PNG into a vCard for compatibility testing.
+    This is inspired by a recent event where Atom got ultra slow: I pasted a 15KB
+    single-line of Base64-encoded PNG into a vCard for compatibility testing.
 
-  I wouldn't want Atom to be optimized for stupid cases like this at the
-  expense of *anything* else.  There are maybe a dozen times in the last decade
-  where handling that better would've been useful.  Keep improving highlighting
-  and tree-views and linters and panes and the extension APIs.  You know, code
-  stuff that brings benefit every day.
+    I wouldn't want Atom to be optimized for stupid cases like this at the
+    expense of *anything* else.  There are maybe a dozen times in the last decade
+    where handling that better would've been useful.  Keep improving highlighting
+    and tree-views and linters and panes and the extension APIs.  You know, code
+    stuff that brings benefit every day.

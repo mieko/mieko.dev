@@ -6,22 +6,22 @@ categories: infra
 author: mieko
 ---
 
-pgpool-ii is awesome.  We don't have it in production yet, but have a staging
+pgpool-ii is awesome. We don't have it in production yet, but have a staging
 environment and have run it through production-scale loads, and are getting
-ready.  Here's a few tips:
+ready. Here's a few tips:
 
   1. *Pretend it doesn't support SSL at all.*  On the frontend-side, it has no
-     hostname mapping (e.g., `hostssl ... cert clientcert=1`, etc).  On the
+     hostname mapping (e.g., `hostssl ... cert clientcert=1`, etc). On the
      backend side, it has no way to specify a separate SSL key pair than
-     the front-end, has no way to force things like `sslmode=verify`, and doesn't 
-     use libpq, so it doesn't support configured conninfo strings or
-     environment variables.  Just wrap it in stunnel.  On both sides.  Yeah.
+     the front-end, has no way to force things like `sslmode=verify`, and
+     doesn't use libpq, so it doesn't support configured conninfo strings or
+     environment variables. Just wrap it in stunnel. On both sides. Yeah.
 
   2. Since you've now got pgpool operating on local sockets, you'd think you
-     can set `listen_addresses = ''` as the docs state.  Unless you're using
+     can set `listen_addresses = ''` as the docs state. Unless you're using
      3.5.4, which was just released and isn't readily packaged yet, there's a
-     bug that'll stop you from launching with that setting.  So let it listen
-     on localhost on a bullshit port and firewall it for now.  Note: Your port
+     bug that'll stop you from launching with that setting. So let it listen
+     on localhost on a bullshit port and firewall it for now. Note: Your port
      setting will effect the name of the socket files it generates.
 
   3. stunnel has a `protocol = pgsql`, which is exactly what you want for the
