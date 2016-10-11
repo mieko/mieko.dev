@@ -16,7 +16,7 @@ accessibility has a good chance of making you slow.  I'm fine with that.
 
 To me, a "code editor" lives in that spot above a text editor, which has no
 conceptual understanding of the language you're writing in, and a full-blown
-IDE, which does.  A code editor has a *shallow understanding* of your language.  
+IDE, which does. A code editor has a *shallow understanding* of your language.
 Enough to syntax highlight, draw red squiggles under words, maybe ctags-style
 rudimentary navigation.  You know.
 
@@ -43,7 +43,7 @@ good excuse to play with the extension API.  After about an hour, I had
 
 Having written Firefox add-ons (And previously, the worst experience this side
 of autotools: *Mozilla Browser extensions*), I knew immediately that this was
-the way to go.  What it lacked in capability, it made up for in approachability.  
+the way to go.  What it lacked in capability, it made up for in approachability.
 
 When a programmer doesn't face a huge uphill battle to scratch their itch, they
 actually will.  And, being the helpful (AKA vain) species we are, we'll
