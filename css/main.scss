@@ -84,6 +84,10 @@ div.post-content {
   -webkit-font-smoothing: antialiased;
 }
 
+blockquote {
+  letter-spacing: 3px;
+}
+
 /* monokai */
 .highlight .hll { background-color: #49483e }
 .highlight .c { color: #75715e } /* Comment */
