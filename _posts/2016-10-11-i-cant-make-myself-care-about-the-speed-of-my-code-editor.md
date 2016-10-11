@@ -11,8 +11,8 @@ editor performs.  I don't care if it can open a 2GB SQL dump.  I care about
 features that make me more effective while writing *code*.[^1]
 
 And you get those features through breadth.  And you get breadth through
-programmer accessibility.  And that accessibility, which brings breadth, has a
-good chance of makes you slow.  I'm fine with that.
+ecosystem.  And you get ecosystem via programmer accessibility.  And that
+accessibility has a good chance of making you slow.  I'm fine with that.
 
 To me, a "code editor" lives in that spot above a text editor, which has no
 conceptual understanding of the language you're writing in, and a full-blown
