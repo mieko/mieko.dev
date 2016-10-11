@@ -62,7 +62,7 @@ code, pre.highlight {
   font-family: $base-font-family;
   border: none;
   background-color: #222 !important;
-  shadow: $shadow !important;
+  font-shadow: $shadow !important;
 }
 
 article.post {
@@ -82,7 +82,16 @@ div.post-content {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
+
+  h2, h3, h4 {
+    font-family: $base-font-family;
+    text-shadow: $shadow !important;
+    font-weight: bold;
+    line-height: 1em;
+    margin-top: 1.5em;
+  }
 }
+
 
 blockquote {
   letter-spacing: -0.25px;
