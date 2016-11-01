@@ -47,22 +47,27 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
-$shadow: 0.5px 0.5px 30px;
+$plain-shadow: 0.5px 0.5px 30px;
+$shadow: #fff $plain-shadow;
+$amber-shadow: $amber $plain-shadow;
 
 html {
-  text-shadow: $shadow;
+  text-shadow: $plain-shadow;
 }
 
+.home .post-list {
+  text-shadow: none;
+}
 
 .site-title {
   color: $amber !important;
+  text-shadow: $amber-shadow;
 }
 
 code, pre.highlight {
   font-family: $base-font-family;
   border: none;
   background-color: #222 !important;
-  font-shadow: $shadow !important;
 }
 
 article.post {
