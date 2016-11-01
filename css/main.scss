@@ -59,6 +59,11 @@ html {
   text-shadow: none;
 }
 
+.post .post-header .post-title {
+  color: white;
+  text-shadow: $shadow;
+}
+
 .site-title {
   color: $amber !important;
   text-shadow: $amber-shadow;
