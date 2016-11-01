@@ -15,7 +15,8 @@ boils down to:
   * Microsoft isn't too happy about the duration of this window, and asked for an extension
     because they have an established workflow in place to handle things like this.
   * Microsoft's process ("Patch Tuesday") was, as far as I can tell, brought about because IT
-    departments inside of many businesses wanted ("needed") a predictable update schedule.
+    departments inside of many businesses wanted ("needed") a predictable update schedule.  I'd
+    bet the lag was spent trying to work it into this patch cycle.
   * None of this shit works.
 
 This is only peripherally related, but I'll take any excuse I can to run off at the mouth about
