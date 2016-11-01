@@ -17,12 +17,12 @@ boils down to:
   * Microsoft's process ("Patch Tuesday") was, as far as I can tell, brought about because IT
     departments inside of many businesses wanted ("needed") a predictable update schedule.  I'd
     bet the lag was spent trying to work it into this patch cycle.
-  * None of this shit works.
+  * None of this  works.
 
 This is only peripherally related, but I'll take any excuse I can to run off at the mouth about
 how terrible present-day corporate IT is.
 
-Shitty IT departments have ruined software and the internet for too long.  It seems like they spend
+Bad IT departments have ruined software and the internet for too long.  It seems like they spend
 the majority of their salaried hours figuring out how not to do their job.
 
 Here's how IT should break down:
@@ -38,7 +38,7 @@ Instead, it's turned into:
   1. Employees need to be able to use up-to-date browsers and software to be able to accomplish
      their job more effectively than they did last year.  Some of their competitors have newer,
      smarter, systems, and management expects more per week than last year.
-  2. IT finds a way to excuse *doing fucking nothing*.  They literally have to be drug into and
+  2. IT finds a way to excuse *doing absolutely nothing*.  They literally have to be drug into and
      usually *past* end-of-life notices from software vendors, and then whine about having to take
      action.
 
@@ -78,7 +78,7 @@ I've never seen a field where my expectations of the level of competency and the
 competency are so wildly mismatched.
 
 Microsoft caters to this because it's their bread and butter.  They've built processes around
-dealing with organizations like that. I get it.  But that Microsoft is beholden to shitty IT
+dealing with organizations like that. I get it.  But that Microsoft is beholden to lame IT
 departments does not place Google at fault for not playing along.  It's a corner that part of the
 industry has painted themselves into, and the rest of the world shouldn't have to unknowingly
 suffer the repercussions of not having timely disclosure.
