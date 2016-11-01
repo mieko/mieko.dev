@@ -78,6 +78,11 @@ article.post {
   font-size: 80%;
 }
 
+.home a.post-link {
+  color: #fff;
+  text-shadow: $shadow;
+}
+
 a.more {
   color: #b38800 !important;
 }
