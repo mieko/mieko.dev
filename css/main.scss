@@ -61,12 +61,12 @@ html {
 
 .post .post-header .post-title {
   color: white;
-  text-shadow: $shadow;
+  text-shadow: $shadow !important;
 }
 
 .site-title {
   color: $amber !important;
-  text-shadow: $amber-shadow;
+  text-shadow: $amber-shadow !important;
 }
 
 code, pre.highlight {
