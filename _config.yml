@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: nerds.meter.md
-# email: angry-nerds@meter.md
+title: mieko's nerd rants
+email: mike@mikeowens.us
 description: >
-  The ranting grounds of the meter.md engineering group.
+  Mike Owens (mieko) Nerd Rand Blog
 baseurl:  # the subpath of your site, e.g. /blog
-url: https://nerds.meter.md/ # the base hostname & protocol for your site
-twitter_username: meter_md
-github_username:  metermd
+url: https://mieko.dev/ # the base hostname & protocol for your site
+twitter_username: leetliekmiek
+github_username:  mieko
 
 # Build settings
 markdown: kramdown
