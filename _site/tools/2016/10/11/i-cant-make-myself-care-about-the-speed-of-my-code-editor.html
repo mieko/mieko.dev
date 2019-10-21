@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>I Can’t Make Myself Care about the Speed of my Code Editor | mieko’s nerd rants</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="I Can’t Make Myself Care about the Speed of my Code Editor" />
+<meta name="author" content="mieko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Above a certain minimum usability threshold, I don’t care how fast my code editor performs. I don’t care if it can open a 2GB SQL dump. I care about features that make me more effective while writing code.[^1]" />
+<meta property="og:description" content="Above a certain minimum usability threshold, I don’t care how fast my code editor performs. I don’t care if it can open a 2GB SQL dump. I care about features that make me more effective while writing code.[^1]" />
+<link rel="canonical" href="https://mieko.dev//tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html" />
+<meta property="og:url" content="https://mieko.dev//tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html" />
+<meta property="og:site_name" content="mieko’s nerd rants" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-11T05:50:00-04:00" />
+<script type="application/ld+json">
+{"description":"Above a certain minimum usability threshold, I don’t care how fast my code editor performs. I don’t care if it can open a 2GB SQL dump. I care about features that make me more effective while writing code.[^1]","headline":"I Can’t Make Myself Care about the Speed of my Code Editor","dateModified":"2016-10-11T05:50:00-04:00","datePublished":"2016-10-11T05:50:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://mieko.dev//tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html"},"url":"https://mieko.dev//tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html","author":{"@type":"Person","name":"mieko"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://mieko.dev//feed.xml" title="mieko's nerd rants" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">mieko&#39;s nerd rants</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">I Can&#39;t Make Myself Care about the Speed of my Code Editor</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-10-11T05:50:00-04:00" itemprop="datePublished">Oct 11, 2016
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">mieko</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Above a certain minimum usability threshold, I don’t care how fast my code
+editor performs.  I don’t care if it can open a 2GB SQL dump.  I care about
+features that make me more effective while writing <em>code</em>.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<p>And you get those features through breadth.  And you get breadth through
+ecosystem.  And you get ecosystem via programmer accessibility.  And that
+accessibility has a good chance of making you slow.  I’m fine with that.</p>
+
+<p>To me, a “code editor” lives in that spot above a text editor, which has no
+conceptual understanding of the language you’re writing in, and a full-blown
+IDE, which does. A code editor has a <em>shallow understanding</em> of your language.
+Enough to syntax highlight, draw red squiggles under words, maybe ctags-style
+rudimentary navigation.  You know.</p>
+
+<p>Now, people like to whine about it, but an IDE has a total out for being slow.
+It’s doing a <em>lot</em> of work.  A lot of them literally run a compiler front-end
+over your buffer every few key-strokes.  They constantly re-index a huge amount
+of open buffers and closed files to resolve references, so you can click on
+<code class="highlighter-rouge">UIViewController</code> and bring yourself to the documentation or header file.</p>
+
+<p>The engineering effort required to do all of that in real-time is huge.  Which
+is why most IDEs focus on <em>a</em> language, or <em>a few related</em> languages.  It’s a
+depth vs. breadth thing.</p>
+
+<p>In my day to day work, I need a <em>lot</em> of breadth.  That’s sort of the nature/
+nightmare of modern web and mobile development.  And you get breadth by making
+your editor easy to extend.</p>
+
+<p>A while after Chrome came out, it got a lot of flak when they revealed its
+extension system.  It was <em>really</em> simple compared to Firefox’s, and offered
+nowhere near the same capability.  Around the same time, they decided to
+remove the “View Background Image” context menu item.  I thought this was a
+good excuse to play with the extension API.  After about an hour, I had
+<a href="https://gist.github.com/mieko/a6a16d239d8179fd8b771322dfa4706f">this</a>.</p>
+
+<p>Having written Firefox add-ons (And previously, the worst experience this side
+of autotools: <em>Mozilla Browser extensions</em>), I knew immediately that this was
+the way to go.  What it lacked in capability, it made up for in approachability.</p>
+
+<p>When a programmer doesn’t face a huge uphill battle to scratch their itch, they
+actually will.  And, being the helpful (AKA vain) species we are, we’ll
+publish it.</p>
+
+<p>I moved to Atom a few years ago, when it <em>barely</em> hit the minimum bar for
+speed.  Hell, it still lacked a lot of features I really wanted.  But it had
+the few things I knew it <em>had to have</em> to end up useful to me:</p>
+
+<ol>
+  <li>It was (eventually) open source.  I change code editors about as often as
+I plan on changing spouses, so I wasn’t going to risk having my muscle
+memory re-trained on something that would end up abandoned.  Enough people
+outside of GitHub care about Atom that I know it won’t end up useless if
+the original authors call it a day.</li>
+  <li>It had a straightforward plugin API that people were actually using
+en-masse.  It did this by shoving a browser and JS runtime into a binary
+and developing on top of that.  Crazy times.</li>
+</ol>
+
+<p>As a programmer, I’m not a fan of Javascript.  I’m not a fan of “Classic
+Javascript”.  I’m not a fan of “Modern Javascript”.  I think The Good Parts are
+half-assed.  But you can’t avoid it, and there’s a huge mass of people with
+much worse taste than myself eager to write Javascript.</p>
+
+<p>And if you want an editor with breadth, you need an army of people contributing
+to the ecosystem.  And you do that by making it easy for them to scratch their
+itch by using technologies that they’re familiar with.  Even if that means
+benchmarks put you at a quarter the rendering speed of SublimeText.</p>
+
+<p>Even if that means “it gets unusably slow when I open <code class="highlighter-rouge">/dev/hda</code>”.</p>
+
+<p>Even if that means <em>I</em> have to write Javascript to extend it.</p>
+
+<p>This perspective doesn’t apply to all fields.  Postgres or Linux would be a
+disaster prioritizing like this.  But weirdly enough, <strong>a code editor needs
+network effects</strong>.  Really bad.</p>
+
+<p>If you felt burnt by the SublimeText thing (I was), or the TextMate thing
+(skipped that one), consider this point.</p>
+
+<p>An editor thats an order of magnitude faster than Atom means nothing to me if
+it’s not at least <em>approaching</em> feature parity, ecosystem included.</p>
+
+<h2 id="bonus-a-mini-rant-about-hardware-and-tooling">Bonus: A Mini-Rant about Hardware and Tooling</h2>
+
+<p>VSCode is pretty awesome.  I’ve played with it a lot over the last two months.
+I need multiple project folders, blah, blah…, but it’ll get there.</p>
+
+<p>People tell me it’s faster than Atom.  I’ve read it enough to believe it, but
+I can’t tell.  And I spend half my time on a 2011 mid-range iMac.  And before
+that, when Atom was slower, Ubuntu + an Acer laptop that was so old that the
+battery was more likely to catch fire than hold a charge.</p>
+
+<p>What are you people coding on?</p>
+
+<blockquote>
+  <p>Well, every morning I have to manipulate a 3GB nginx log file as an
+integral part of my job.  Atom and VSCode are useless because they can’t
+handle this.</p>
+</blockquote>
+
+<p>I understand that not everyone “thinks in Unix”, but when I was using Vim for
+<em>everything</em> (for over a decade), which can handle files that size just fine,
+it still didn’t feel like a problem with “an editor solution”.  It felt like a
+problem for <code class="highlighter-rouge">grep</code> or <code class="highlighter-rouge">sed</code> or <code class="highlighter-rouge">awk</code>.</p>
+
+<p>I wouldn’t get too attached to a hex editor unable to deal with large/huge
+files.  I expect it to handle an edit to a BluRay ISO file’s header or
+whatever.</p>
+
+<p>But I want my code editor to provide the best experience it can for editing
+code.  You know: Text files, typically a few hundred lines, maybe a few thousand
+lines if you’re on a shitty project or hand-editing generated code like a shitty
+programmer.  A tradeoff made that sacrifices <em>anything</em>  for a dealing MB+
+log files was chosen poorly.</p>
+
+<p>Yeah, we’d all like a Wrangler that can climb over a building, and then do 0-60
+in 4 seconds from stoplight.</p>
+
+<p>In reality, the things that make a Wrangler good at what it does are directly at
+odds with what makes a Model S awesome.  And in software, it doesn’t even have
+to be an engineering trade-off: it can be man-power, feature priorities, or
+choosing an architecture that sucks for edge cases but optimizes for ecosystem.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+
+      <p>This is inspired by a recent event where Atom got ultra slow: I pasted a 15KB
+single-line of Base64-encoded PNG into a vCard for compatibility testing.</p>
+
+      <p>I wouldn’t want Atom to be optimized for stupid cases like this at the
+expense of <em>anything</em> else.  There are maybe a dozen times in the last decade
+where handling that better would’ve been useful.  Keep improving highlighting
+and tree-views and linters and panes and the extension APIs.  You know, code
+stuff that brings benefit every day. <a href="#fnref:1" class="reversefootnote"> ^^ </a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">mieko&#39;s nerd rants</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">mieko&#39;s nerd rants</li><li><a class="u-email" href="mailto:mike@mikeowens.us">mike@mikeowens.us</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/mieko"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">mieko</span></a></li><li><a href="https://www.twitter.com/leetliekmiek"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">leetliekmiek</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Mike Owens (mieko) Nerd Rand Blog
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

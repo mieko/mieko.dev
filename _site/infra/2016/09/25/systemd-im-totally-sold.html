@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>systemd: I’m Totally Sold | mieko’s nerd rants</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="systemd: I’m Totally Sold" />
+<meta name="author" content="mieko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve been out of the “devops” game for a while, since it was just called “admin”. So while I had read about the systemd/upstart wars, everything just kept working for me, so I didn’t pay too much attention." />
+<meta property="og:description" content="I’ve been out of the “devops” game for a while, since it was just called “admin”. So while I had read about the systemd/upstart wars, everything just kept working for me, so I didn’t pay too much attention." />
+<link rel="canonical" href="https://mieko.dev//infra/2016/09/25/systemd-im-totally-sold.html" />
+<meta property="og:url" content="https://mieko.dev//infra/2016/09/25/systemd-im-totally-sold.html" />
+<meta property="og:site_name" content="mieko’s nerd rants" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-25T10:07:00-04:00" />
+<script type="application/ld+json">
+{"description":"I’ve been out of the “devops” game for a while, since it was just called “admin”. So while I had read about the systemd/upstart wars, everything just kept working for me, so I didn’t pay too much attention.","headline":"systemd: I’m Totally Sold","dateModified":"2016-09-25T10:07:00-04:00","datePublished":"2016-09-25T10:07:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://mieko.dev//infra/2016/09/25/systemd-im-totally-sold.html"},"url":"https://mieko.dev//infra/2016/09/25/systemd-im-totally-sold.html","author":{"@type":"Person","name":"mieko"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://mieko.dev//feed.xml" title="mieko's nerd rants" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">mieko&#39;s nerd rants</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">systemd: I&#39;m Totally Sold</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-09-25T10:07:00-04:00" itemprop="datePublished">Sep 25, 2016
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">mieko</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’ve been out of the “devops” game for a while, since it was just called
+“admin”. So while I had read about the systemd/upstart wars, everything just
+kept working for me, so I didn’t pay too much attention.</p>
+
+<p>When I had to take up parts of the ops role again at meter.md, it seemed like a
+lot had changed: sysvinit was dead, upstart had came and gone, systemd won, but
+it seemed like everyone hated it.</p>
+
+<p>Circa 2000 or so, I wrote, but never released, a dependency-based half-assed
+init called finitd (in C, totally unrelated to the Python utility that a web
+search will find you). It did the notify-pid-1-via-a-socket-thing that was
+managed by client programs talking to the daemon. I had utilities called cute
+things like <code class="highlighter-rouge">wants</code> and <code class="highlighter-rouge">needs</code> and <code class="highlighter-rouge">provides</code> that were placed at the
+beginning of the init script’s <code class="highlighter-rouge">$PATH</code> before it was executed. They’d notify
+and and block as required. The scripts ended up about as readable as a
+script-based solution could be, a typical service like Apache being less than
+a screen-full of code.</p>
+
+<p>I didn’t have cgroups or dbus, and I had the notion that it’d be Unix-
+portable, so I got to avoid those decisions. I had converted my SuSE machine
+to launch with it, writing startup scripts that’d bring up system services all
+the way through XFree86 and KDM/KDE2. Spending two weeks sitting in hotel
+rooms from 7PM to 2AM with gcc-2.95 and W. Richard Stevens’ <em>Advanced
+Programming in the Unix Environment</em><sup id="fnref:apue"><a href="#fn:apue" class="footnote">1</a></sup> pretty much solidified my alliance with
+Unix: writing finitd basically just re-wired me to think in terms of Unix, and
+I haven’t been able to shake it since.</p>
+
+<p>What sparked the ~6K lines that became finitd was basically being totally
+pissed at sysvinit. I’d do anything to avoid having to write an init script
+for an application I was writing. It was a pain in the ass. They were hard
+to properly test. They were inherently non-portable. And above all, it just
+seemed like busywork.</p>
+
+<p>It seems like similar approaches were explored around the same time by other
+people, and never quite caught on. I didn’t bother with releasing or promoting
+finitd because I really had nothing to gain from it: and it’d just get picked
+apart and I’d spend all day arguing on Slashdot about it, much the way Lennart
+and crew had to on Hacker News through the eventual semi-acceptance of systemd.</p>
+
+<p>Anyway, the point of this story is: I had a huge tribal need to defend “the
+Unix way”, and I think finitd exemplified that. And it worked. But even with
+years of polish, it wouldn’t have touched half the surface area of solved
+problems systemd does with its approach.</p>
+
+<p>There are a few things in Unix that hung around just way too long. The tty/pty/
+terminal abstraction needs to be stripped down to the parts that are still
+useful. crond should’ve been replaced long before systemd had a chance to take
+it on. The <code class="highlighter-rouge">fork(), fork(), setsid()</code> dance and <code class="highlighter-rouge">daemon()</code> should’ve been long
+dead, because we could’ve had supervisors as smart as systemd 20 years ago.</p>
+
+<p>A few days ago, during the middle of task, I naturally just had the thought:
+“…and now I’ll just write a quick systemd unit for that.”</p>
+
+<p>That’s when I realized systemd had really become a great thing for
+administrators. I first looked into systemd <em>at all</em> by necessity just a few
+weeks ago, and I had already assimilated the idea that “a quick systemd unit”
+is a Real Thing in my toolbox, and had become part of my mindset.</p>
+
+<p>I write systemd units like I edit config files. I write scripts that generate
+systemd units. These are things I avoided with sysvinit and /etc/rc for years.</p>
+
+<p>On the other side, these days I write my daemons like a normal program without
+any gymnastics. I run in the foreground. I only fork when I <em>need</em> to fork.
+I don’t have flags like <code class="highlighter-rouge">--detach</code> or <code class="highlighter-rouge">--no-daemon</code> or <code class="highlighter-rouge">--foreground</code>.
+I don’t <code class="highlighter-rouge">syslog()</code>, I log messages to STDOUT and STDERR. I don’t create a
+pidfile. I exit with a return code from main like the prophets Ken and Dennis
+intended. I don’t <code class="highlighter-rouge">chroot</code> or <code class="highlighter-rouge">setuid</code> for security. I don’t load a
+.conf file if all I need are a few values that can be expressed in environment
+variables.</p>
+
+<p>The first few lines of running code are on their way to completing its task,
+not dragging around 30 years of Unix daemon boilerplate. That stuff is handled
+in like 10 lines of systemd, and if they disagree with the user’s use-case,
+they’re editable without learning another config file format.</p>
+
+<p>I don’t get the argument that systemd is desktop-centric. On Linux desktops,
+I could literally never touch the init system and get by fine not caring. On
+servers, I’m using for really useful stuff constantly.</p>
+
+<p>I don’t give a shit about what it does on a desktop. I don’t care about
+startup time: we kill and image nodes 5x as often as we reboot them. From a
+manageability standpoint, though, I do know that I’d trade a decent amount of
+niceties on macOS to get systemd instead of the “can’t force myself to clutter
+my thoughts with this” launchd<sup id="fnref:launchd"><a href="#fn:launchd" class="footnote">2</a></sup>.</p>
+
+<p>systemd is bigger than some people like, and I haven’t even touched on timers
+or socket activation or disks or the other stuff systemd subsumed.</p>
+
+<p>The difference is: If nothing else, systemd  made large parts of this stuff
+actually useable by people other than package-maintainers and OS integrators.
+And it’ll continue to take logic out of init scripts and eventually <em>even the
+running daemons themselves</em> if the model continues to hold.</p>
+
+<p>But the real bullshit argument here is the “Unix Way” one. The “my init system
+shouldn’t care about my mountpoint and cdroms and network events” one.</p>
+
+<p>We’re using a distributed filesystem holding user data, and we have daemons
+that operate on this data.</p>
+
+<p>The systemd way of handling this turns into a task that depends on the network,
+and then depends on a service (glusterfs) to launch, and then ensures that the
+network filesystem is mounted, before launching our tool at specified intervals
+throughout the day. This isn’t stuff we can just leave to the default packaged
+configs. It’s like two-dozen declarative lines because systemd knows about all
+this stuff, and how they relate to each other: The network, launching daemons,
+mount events, timers.</p>
+
+<p>What’s the alternative “Unix philosophy” way?  We have perfect single-purpose
+tools for each of these. We’ll have sysvinit or rc.d, and then set up ifupdown
+hooks if we wan’t to be informed when the network starts and stops, and  we’ll
+have scripts calling out to mount when we need to, and use cron for scheduling.</p>
+
+<p>Everything perfectly handling its one piece of the problem.</p>
+
+<p>So how do we orchestrate all this stuff together, to actually solve our
+particulars?  Simple: a fucking 500 line init script that ends up looking
+a <em>lot</em> like sysvinit.</p>
+
+<p>The complexity systemd’s “overreaching bloat” handles is our complexity now.</p>
+
+<p>And our implementation won’t be as battle-tested.</p>
+
+<p>And it’ll be written in bash.</p>
+
+<p>Good luck with that.</p>
+
+<p>If that’s the Unix Way people want, I’ve lived it, and they can keep it.</p>
+
+<p><em>(You’ll notice we have no comments here: This is a one-way trash-talking
+soapbox, and I can never be wrong if I don’t see rebuttals.)</em></p>
+
+<p>^D</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:apue">
+
+      <p>APUE is vastly underrated, even today. I consider it the closest thing to
+a Unix programing bible as has ever been written. Regardless of your
+experience level, reviewing APUE every other year will remind you of
+<em>something</em> that’ll end up applicable soon. The later editions,
+co-authored by Stephen A. Rago after Mr. Steven’s passing, are equally
+excellent. Keep it next to Knuth and the Dragon Book on the shortlist.
+My attachment to this book and era makes it the only book that just feels
+wrong if it’s not a physical copy. <a href="#fnref:apue" class="reversefootnote"> ^^ </a></p>
+    </li>
+    <li id="fn:launchd">
+
+      <p>Please don’t bring launchd as it exists on macOS into the BSDs. There, we
+need something declarative and more modern, but not launchd as-is. I’ve
+been told the “problem with launchd” is actually “the problem with
+launchctl” which does the crazy XML thing.</p>
+
+      <p>If I were tasked with solving this, I’d start from the systemd Unit file
+format and work myself backward. The language has the right balance of
+simplicity, and enough outs and options to actually express the zoo of
+services you’d actually need to handle.</p>
+
+      <p>Of course, because surely someone will come up with <em>obviously superior</em>
+nouns, verbs, and comma placements, this will never happen, and I’ll (not?)
+be writing writing two service descriptions in 20X6. <a href="#fnref:launchd" class="reversefootnote"> ^^ </a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/infra/2016/09/25/systemd-im-totally-sold.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">mieko&#39;s nerd rants</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">mieko&#39;s nerd rants</li><li><a class="u-email" href="mailto:mike@mikeowens.us">mike@mikeowens.us</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/mieko"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">mieko</span></a></li><li><a href="https://www.twitter.com/leetliekmiek"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">leetliekmiek</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Mike Owens (mieko) Nerd Rand Blog
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
