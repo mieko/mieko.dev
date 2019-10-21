@@ -4,10 +4,10 @@
     <title>mieko's nerd rants</title>
     <description>Mike Owens (mieko) Nerd Rand Blog
 </description>
-    <link>https://mieko.dev//</link>
-    <atom:link href="https://mieko.dev//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Oct 2019 03:57:43 -0400</pubDate>
-    <lastBuildDate>Mon, 21 Oct 2019 03:57:43 -0400</lastBuildDate>
+    <link>https://mieko.dev/</link>
+    <atom:link href="https://mieko.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 21 Oct 2019 04:10:20 -0400</pubDate>
+    <lastBuildDate>Mon, 21 Oct 2019 04:10:20 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -97,8 +97,8 @@ that’s where raises and holiday bonuses and all that come from.&lt;/p&gt;
 rid ourselves of that problem.&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Jan 2019 09:25:00 -0500</pubDate>
-        <link>https://mieko.dev//software/2019/01/16/understand-costs.html</link>
-        <guid isPermaLink="true">https://mieko.dev//software/2019/01/16/understand-costs.html</guid>
+        <link>https://mieko.dev/software/2019/01/16/understand-costs.html</link>
+        <guid isPermaLink="true">https://mieko.dev/software/2019/01/16/understand-costs.html</guid>
         
         
         <category>software</category>
@@ -194,8 +194,8 @@ trying to make it as Consumer Grade as possible.  Just because you wouldn’t us
 the industry doesn’t mean it has to be terrible.&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Dec 2018 04:51:00 -0500</pubDate>
-        <link>https://mieko.dev//software/2018/12/23/boring-verticals.html</link>
-        <guid isPermaLink="true">https://mieko.dev//software/2018/12/23/boring-verticals.html</guid>
+        <link>https://mieko.dev/software/2018/12/23/boring-verticals.html</link>
+        <guid isPermaLink="true">https://mieko.dev/software/2018/12/23/boring-verticals.html</guid>
         
         
         <category>software</category>
@@ -294,8 +294,8 @@ it out.  “Do nothing” isn’t a solution.  I’ve started calling these type
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 01 Nov 2016 05:05:00 -0400</pubDate>
-        <link>https://mieko.dev//security/2016/11/01/responsible-disclosure-and-the-scourge-of-internal-it.html</link>
-        <guid isPermaLink="true">https://mieko.dev//security/2016/11/01/responsible-disclosure-and-the-scourge-of-internal-it.html</guid>
+        <link>https://mieko.dev/security/2016/11/01/responsible-disclosure-and-the-scourge-of-internal-it.html</link>
+        <guid isPermaLink="true">https://mieko.dev/security/2016/11/01/responsible-disclosure-and-the-scourge-of-internal-it.html</guid>
         
         
         <category>security</category>
@@ -444,8 +444,8 @@ stuff that brings benefit every day. &lt;a href=&quot;#fnref:1&quot; class=&quo
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 11 Oct 2016 05:50:00 -0400</pubDate>
-        <link>https://mieko.dev//tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html</link>
-        <guid isPermaLink="true">https://mieko.dev//tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html</guid>
+        <link>https://mieko.dev/tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html</link>
+        <guid isPermaLink="true">https://mieko.dev/tools/2016/10/11/i-cant-make-myself-care-about-the-speed-of-my-code-editor.html</guid>
         
         
         <category>tools</category>
@@ -552,8 +552,8 @@ Hard links cannot cross filesystem boundaries. &lt;a href=&quot;#fnref:3&quot; 
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 15:53:00 -0400</pubDate>
-        <link>https://mieko.dev//infra/2016/09/25/stop-babysitting-my-permissions.html</link>
-        <guid isPermaLink="true">https://mieko.dev//infra/2016/09/25/stop-babysitting-my-permissions.html</guid>
+        <link>https://mieko.dev/infra/2016/09/25/stop-babysitting-my-permissions.html</link>
+        <guid isPermaLink="true">https://mieko.dev/infra/2016/09/25/stop-babysitting-my-permissions.html</guid>
         
         
         <category>infra</category>
@@ -727,8 +727,8 @@ be writing writing two service descriptions in 20X6. &lt;a href=&quot;#fnref:la
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 25 Sep 2016 10:07:00 -0400</pubDate>
-        <link>https://mieko.dev//infra/2016/09/25/systemd-im-totally-sold.html</link>
-        <guid isPermaLink="true">https://mieko.dev//infra/2016/09/25/systemd-im-totally-sold.html</guid>
+        <link>https://mieko.dev/infra/2016/09/25/systemd-im-totally-sold.html</link>
+        <guid isPermaLink="true">https://mieko.dev/infra/2016/09/25/systemd-im-totally-sold.html</guid>
         
         
         <category>infra</category>
@@ -779,8 +779,8 @@ stunnel → postgres.&lt;/p&gt;
 &lt;p&gt;^D&lt;/p&gt;
 </description>
         <pubDate>Sat, 24 Sep 2016 15:52:14 -0400</pubDate>
-        <link>https://mieko.dev//infra/2016/09/24/pgpool-ii-in-practice.html</link>
-        <guid isPermaLink="true">https://mieko.dev//infra/2016/09/24/pgpool-ii-in-practice.html</guid>
+        <link>https://mieko.dev/infra/2016/09/24/pgpool-ii-in-practice.html</link>
+        <guid isPermaLink="true">https://mieko.dev/infra/2016/09/24/pgpool-ii-in-practice.html</guid>
         
         
         <category>infra</category>
@@ -793,8 +793,8 @@ stunnel → postgres.&lt;/p&gt;
 This isn’t an official publication, but will be more interesting.&lt;/p&gt;
 </description>
         <pubDate>Sat, 24 Sep 2016 15:52:14 -0400</pubDate>
-        <link>https://mieko.dev//meta/2016/09/24/introducing-angry-nerds.html</link>
-        <guid isPermaLink="true">https://mieko.dev//meta/2016/09/24/introducing-angry-nerds.html</guid>
+        <link>https://mieko.dev/meta/2016/09/24/introducing-angry-nerds.html</link>
+        <guid isPermaLink="true">https://mieko.dev/meta/2016/09/24/introducing-angry-nerds.html</guid>
         
         
         <category>meta</category>
