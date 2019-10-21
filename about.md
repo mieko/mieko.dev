@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-These are the ranting grounds of the [https://mikeowens.us/](Mike Owens).  Posts here
-tend to deal with technology, but that's not strictly necessary.
+I just whine about things here.
 
-I know you hate the [font](http://asdasd.rpg.fi/~svo/glasstty/), the blur
-makes it literally unreadable, and you're tired of people being cute on the
-internet.
+I know you can't stand the font and that people shouldn't have fun on the internet.
+
+You can see a portfolio at [mikeowens.us](https://mikeowens.us/), though.
+
 
 <p class="footnotes" markdown="1">
 Powered by

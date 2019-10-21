@@ -14,7 +14,7 @@ $amber: #ffc200;
 
 // Our variables
 $base-font-family: VT220, 'PT Mono', 'Courier', monospace;
-$base-font-size:   16px;
+$base-font-size:   14pt;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
@@ -22,7 +22,7 @@ $base-line-height: 1.8;
 $spacing-unit:     30px;
 
 $text-color:       #f3f3f3;
-$background-color: #090909;
+$background-color: #101010;
 $brand-color:      $amber;
 
 $grey-color:       #828282;
@@ -30,7 +30,7 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    50em;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -47,7 +47,7 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
-$plain-shadow: 0.5px 0.5px 30px;
+$plain-shadow: 0.5px 0.5px 50px;
 $shadow: #fff $plain-shadow;
 $amber-shadow: $amber $plain-shadow;
 
@@ -86,6 +86,10 @@ article.post {
 .home .post-list a.post-link {
   color: #fff;
   text-shadow: $shadow !important;
+  &::before {
+    content: ">_ ";
+    color: $amber;
+  }
 }
 
 a.more {
