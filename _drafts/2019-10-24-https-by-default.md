@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "It's 2020: It's Time for HTTPS by Default"
+title: "It's almost 2020: It's Time for HTTPS by Default"
 date: "2019-10-24 15:10:00 -0500"
 categories: web
 author: mieko
@@ -63,8 +63,8 @@ connection.  How can we do that?  Here's my best effort:
      be assumed to mean port 443+TLS by my browser.  If that fails, attempt 80+plaintext, with
      appropriate scary warnings in the UI.
 
-HTTP has vulnerable spots already.  Assuming HTTPS first closes one of the the last few encrypted
-gaps we have that matters (*encrypted SNI rant here*).  Right now, sites trying to do the
+HTTP has vulnerable spots already.  If you assume HTTPS first, it closes one of the the last few
+unencrypted gaps we have that matters (*encrypted SNI rant here*).  Right now, sites trying to do the
 *right thing* get an extra round-trip and MITM vector unless they're in HSTS preload.  Let's fix
 this.
 
