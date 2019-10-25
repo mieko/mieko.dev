@@ -9,7 +9,7 @@ Hey, good people!
 
 It's damn-near 2020, and it's time for us to convince browsers to go HTTPS by default.
 
-I started an experiment a month ago: I configured [asuswrt-merlin](https://www.asuswrt-merlin.net/),
+I started an experiment a month ago: I configured [asuswrt-merlin](https://www.asuswrt-merlin.net/)
 to completely black-hole outgoing port 80 on the network.
 
 Over that time, over 40 clients have connected to my network: my friends and family.  iPhones,
@@ -34,7 +34,7 @@ seemed like a hack to me.  I mean, it's awesome that the functionality is there,
 shipping a big-ass JSON file of domain names just seems janky.
 
 I develop web applications all day, and have for years.  These days, if you want to do anything
-half-interesting, even your development environment has to be HTTPS: Service workers, WebRTC, and
+half-interesting, even your development environment has to be HTTPS: Service Workers, WebRTC, and
 a lot of cool new APIs are gated behind a secure connection, for good reason.
 [mkcert](https://github.com/FiloSottile/mkcert) makes that really easy to deal with (and opinionated
 web frameworks like Rails should start doing that out of the box.  But that's another argument.)
@@ -42,7 +42,7 @@ web frameworks like Rails should start doing that out of the box.  But that's an
 ## Fixing It
 
 If I type `example.com` into my omnipresent omnibar, browsers should try `https://example.com/`
-before it tries `http://example.com/`.  Because that's what's on the side of my truck.
+before they try `http://example.com/`.  Because `example.com` is what's on the side of my truck.
 
 I'd like to close my port 80 listeners that just redirect with HSTS headers to https.  I want to
 close that MITM gap by default.  I don't want browsers trying plaintext before a secured
