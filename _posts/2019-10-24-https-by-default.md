@@ -63,7 +63,7 @@ connection.  How can we do that?  Here's my best effort:
      be assumed to mean port 443+TLS by my browser.  If that fails, attempt 80+plaintext, with
      appropriate scary warnings in the UI.
 
-HTTP has vulnerable spots already.  Assuming HTTPS first closes one of the the last few encrypted
+HTTP has vulnerable spots already.  Assuming HTTPS-first closes one of the the last few encrypted
 gaps we have that matters (*encrypted SNI rant here*).  Right now, sites trying to do the
 *right thing* get an extra round-trip and MITM vector unless they're in HSTS preload.  Let's fix
 this.
