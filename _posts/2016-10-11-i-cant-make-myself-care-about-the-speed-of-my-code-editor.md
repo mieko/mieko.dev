@@ -114,7 +114,7 @@ whatever.
 But I want my code editor to provide the best experience it can for editing
 code.  You know: Text files, typically a few hundred lines, maybe a few thousand
 lines if you're on a shitty project or hand-editing generated code like a shitty
-programmer.  A tradeoff made that sacrifices *anything*  for a dealing MB+
+programmer.  A tradeoff made that sacrifices *anything* for a dealing MB+
 log files was chosen poorly.
 
 Yeah, we'd all like a Wrangler that can climb over a building, and then do 0-60

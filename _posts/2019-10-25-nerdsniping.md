@@ -7,7 +7,7 @@ author: mieko
 ---
 It's crazy how web communities work.
 
-I tend to keep drafts for a long time before publishing. In fact, if you know your way aroud GitHub
+I tend to keep drafts for a long time before publishing. In fact, if you know your way around GitHub
 Pages, even my drafts are public.  I'm staring at one now dated "2016-09-27" about iBeacons, a
 lame Apple name for a lame BlueTooth LE technology I ranted about that came and went before I could
 finish the post.

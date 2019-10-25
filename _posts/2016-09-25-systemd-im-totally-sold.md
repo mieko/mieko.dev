@@ -21,7 +21,7 @@ search will find you). It did the notify-pid-1-via-a-socket-thing that was
 managed by client programs talking to the daemon. I had utilities called cute
 things like `wants` and `needs` and `provides` that were placed at the
 beginning of the init script's `$PATH` before it was executed. They'd notify
-and and block as required. The scripts ended up about as readable as a
+and block as required. The scripts ended up about as readable as a
 script-based solution could be, a typical service like Apache being less than
 a screen-full of code.
 
@@ -122,7 +122,7 @@ my thoughts with this" launchd[^launchd].
 systemd is bigger than some people like, and I haven't even touched on timers
 or socket activation or disks or the other stuff systemd subsumed.
 
-The difference is: If nothing else, systemd  made large parts of this stuff
+The difference is: If nothing else, systemd made large parts of this stuff
 actually useable by people other than package-maintainers and OS integrators.
 And it'll continue to take logic out of init scripts and eventually *even the
 running daemons themselves* if the model continues to hold.
@@ -161,8 +161,5 @@ And it'll be written in bash.
 Good luck with that.
 
 If that's the Unix Way people want, I've lived it, and they can keep it.
-
-*(You'll notice we have no comments here: This is a one-way trash-talking
-soapbox, and I can never be wrong if I don't see rebuttals.)*
 
 ^D
