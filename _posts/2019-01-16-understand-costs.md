@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understand the Actual Costs of Building (or defer to someone who does)"
+title:  "Understand the Actual Costs of Building"
 date:   2019-01-16 09:25:00 -0500
 categories: software
 author: mieko
@@ -35,7 +35,7 @@ the pads, too.
 
 A couple of things have already gone wrong: she failed to take into account her hourly rate.  She
 had a good attention to detail, and her partitioned pads came out great.  And she was as fast at
-it as a human could be expected to be.  
+it as a human could be expected to be.
 
 When *she* was quartering the pads, she didn't realize that the actual cost to the company had
 tripled vs. the ones we had been using previously.  Her laundry subordinates didn't make
@@ -71,7 +71,7 @@ Sometimes the cost is so low, just the few-hour debate on a ticket would've alre
 months of service.
 
 We don't set up our own mail servers and IRC channels and SCM hosting anymore for a reason.  It is
-dramatically cheaper to hire it out if you're not doing it on your own time, as a hobby, for free.  
+dramatically cheaper to hire it out if you're not doing it on your own time, as a hobby, for free.
 
 And the companies we pay to handle this stuff are experts: way better than the half-assed efforts
 we could afford to put toward it, as it's not our core competency.  And what we get isn't some
@@ -82,7 +82,7 @@ to save $7 or $50 or probably even $1000/m.  I'm open about costs.  Sometimes pa
 placed head-to-head against company costs many times over in terms of maintenance and development.
 
 If my facilities supervisor had asked first, I would've told her it's not even worth optimizing,
-but there are other things we could address that *would* have a real effect on the bottom line.  
+but there are other things we could address that *would* have a real effect on the bottom line.
 
 Things that if she attacked, would put thousands of dollars a month back into the budget.  And
 that's where raises and holiday bonuses and all that come from.
