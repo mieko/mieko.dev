@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "It's 2020: It's Time for HTTPS by Default"
+title: "It's Almost 2020: It's Time for HTTPS by Default"
 date: "2019-10-24 15:10:00 -0500"
 categories: web
 author: mieko
