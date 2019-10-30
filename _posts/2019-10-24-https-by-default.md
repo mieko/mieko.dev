@@ -57,7 +57,7 @@ connection.  How can we do that?  Here's my best effort:
      and re-requesting over HTTP is acceptable for now, because there's a chance different content
      is served over HTTP and HTTPS endpoints.  *For now.*
 
-  2. *And if you have any yarbles:* treat URL-bar HTTP urls, and `http` links on the web as
+  2. *More controversial but right:* treat URL-bar HTTP urls, and `http` links on the web as
      HTTPS transparently (like a more-chill `Upgrade-Insecure-Hosts`), with HTTP considered a legacy
      fallback.  In 2022, I want 'https' to be effectively  retired, and 'http' links to my site to
      be assumed to mean port 443+TLS by my browser.  If that fails, attempt 80+plaintext, with
