@@ -22,7 +22,7 @@ $base-line-height: 1.8;
 $spacing-unit:     30px;
 
 $text-color:       #f3f3f3;
-$background-color: #101010;
+$background-color: #202020;
 $brand-color:      $amber;
 
 $grey-color:       #828282;
@@ -72,7 +72,9 @@ html {
 code, pre.highlight {
   font-family: $base-font-family;
   border: none;
-  background-color: #222 !important;
+  color: #fff;
+  background-color: $background-color !important;
+  font-weight: bold;
 }
 
 article.post {
