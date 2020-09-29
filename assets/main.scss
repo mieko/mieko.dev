@@ -22,7 +22,7 @@ $base-line-height: 1.8;
 $spacing-unit:     30px;
 
 $text-color:       #f3f3f3;
-$background-color: #202020;
+$background-color: #101010;
 $brand-color:      $amber;
 
 $grey-color:       #828282;
@@ -30,7 +30,7 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    50em;
+$content-width:    40em;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -70,7 +70,7 @@ html {
 }
 
 code, pre.highlight {
-  font-family: $base-font-family;
+  font-family: monospace;
   border: none;
   color: #fff;
   background-color: $background-color !important;
