@@ -6,7 +6,16 @@ categories: web
 author: mieko
 ---
 
-# The CSRF double-submit trick
+These are things you might be doing just because it's habit.  I'm sure you'll find at least one
+issue you'll be *absolutely convinced* you still have to do because you have to make JSP pages for 
+the US Navy on Internet Explorer 6.  This isn't for you then, I guess.  I work on sites for the 
+public.
+
+If you've been developing for a while, you've probably picked up some habits, and uh, just keep 
+doing them forever until someone points them out.  I'm here to point them out.  These are things
+that made sense years ago, but now don't.  So stop doing them.
+
+## The CSRF double-submit trick
 
 The thing where you have a hidden form field in forms, and check that it's also in a cookie when you
 process the request. Or you generate a signed message and include it in a hidden form field your
@@ -32,12 +41,12 @@ const jsonRequestHeaders = {
 
 You can get rid of that in 2020, and replace it with `SameSite=Lax` cookies.
 
-It's "partially supported" in Safari, but the way it's doesn't effect `Lax`.
+It's "partially supported" in Safari, but the way it's weird doesn't effect `Lax`.
 
 If you're still supporting IE11 (don't), most of that 1.03% population also has `SameSite=Lax`.
 
-CSRF stops third-party sites from forcing your logged-in users to interact with your site in
-unexpected ways. Cookies marked `SameSite=Lax` are only sent with requests from your origin.
+CSRF protection stops third-party sites from forcing your logged-in users to interact with your 
+site in unexpected ways. Cookies marked `SameSite=Lax` are only sent with requests from your origin.
 
 So mark your session/auth cookies `Lax` and your CSRF problems go away, because the request will be
 unauthenticated because you never get the cookie. Neat.
@@ -46,14 +55,14 @@ Most modern browsers already treat cookies without a `SameSite` value as `Lax`, 
 already getting this protection. Make it explicit, then rip out all the CSRF double-submit stuff
 from your code.
 
-If you're writing an SPA do the token-passing thing, but please don't reinvent CSRF protection.  
-It's fixed.  Something finally got fixed on the web platform and we can move on and forget it was
-ever a thing.
+If you're writing an SPA do the token-passing thing, but please don't reinvent CSRF protection. It's 
+fixed.  Something finally got fixed on the web platform and we can move on and forget it was ever a 
+thing.
 
 Old browsers not supporting this have much bigger security issues than CSRF. We can now consider
 this a client security issue.
 
-# "Remember Me?" Checkboxes
+## "Remember Me?" Checkboxes
 
 This is something that's still being cargo-culted since I started webdev in the late '90s.
 
@@ -77,7 +86,7 @@ not useful. Overwhelmingly, the _next user_ is more likely to _log out the previ
 user_ before logging in, because people are forgetful and rarely anticipate having to log-out.
 
 A lot of times, the norm in this situation is to just use a shared account anyway if possible. This
-is regardless of any office rules or a services' ToS.
+is regardless of any office rules or a service's ToS.
 
 If you know your users are in this scenario, a reality-based UI improvement you can make for
 them is the opposite of short-lived session cookies: allow multiple accounts to be logged in
@@ -96,7 +105,7 @@ Sam Dutton, Developer Advocate on the Chrome team has a great 20 minute video co
 [Sign-in form best practices](https://www.youtube.com/watch?v=alGcULGtiv8).  "Remember Me?" is not
 shown in any examples or even mentioned once.
 
-# TLS &lt; 1.2
+## TLS &lt; 1.2
 
 Hopefully in a year, this will read "TLS &lt; 1.3".  But even if you've dropped IE11, there's a 
 weird long-tail of iOS devices stuck on iOS 12 and obscure Android mobiles that, in aggregate, 
@@ -105,7 +114,7 @@ are just at 10% of users
 You are wasting configuration brain-space and increasing vulnerability surface area by supporting 
 anything older than TLS 1.2.  So pull those old versions out of `ssl_protocols`.
 
-# EV Certificates
+## EV Certificates
 
 This is sort of a joke, because hardly anyone got tricked into buying these.  If you need data 
 backing how useless these are, here's 
@@ -114,5 +123,49 @@ backing how useless these are, here's
 If your boss wants to waste money, try to convince them to [donate half the cost of an EV cert to 
 LetsEncrypt](https://letsencrypt.org/donate/) instead.
 
-# Cosmetic Validations
+## Cosmetic Validations
 
+You have to sanitize inputs to your webapps.  But how much time should you spend on those error 
+messages for invalid form fields?  There's a chance you're doing fancy JS client-side validation, 
+and then falling back to the same logic on the backend, and reporting errors in a little fancy box, 
+etc.
+
+[HTML5 client-side form validation](https://html.spec.whatwg.org/multipage/forms.html#client-side-form-validation) 
+can probably handle most of the "superficial UI" part of this problem, and they're supported pretty 
+much everywhere.
+
+```html
+  <input type=text required>
+  <input type=email required>
+  <input type=text minlength=8 pattern="\ANCC-\d+\z">
+```
+
+You still have to check for sanity on the backend, but letting browsers handle these ultra-common
+cases means, in some apps, you don't even have to worry about how to *present* these errors to the
+user.  [MDN has some great examples, too.](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+
+Don't control-freak over not being able to style the browser's validation UI.  That's the kind of 
+thinking that got us "Smooth scrolling" JS.
+
+## Smooth-Scrolling JS
+
+Just kidding.  You never did that, right?
+
+## CSS Sprites
+
+That thing where you just send one `.png` with a bunch of images crammed in, then specify the 
+bounding boxes in CSS.  This was to get around connection limits and head-of-line blocking behaviour
+in HTTP/1.1.  You should be using HTTP/2 and that stuff matters hardly at all there.
+
+## Things that may be on this list depending on how adventurous you are
+
+  - Compiling ES6+ down to 1996 Javascript.  At least check the browsers you want to support and see
+    what preset tweaks you can make.  I could save approximately 40% of the filesize of assets I'm
+    working on if I could just target fully-up-to-date JS engines.
+  
+## Things that aren't on this list but should be
+
+  - Language-choosers.  We should be able to respond to `Accept-Language` and be done with it.
+    Users are weird, though, and browsers don't offer them anything quick, so you might still need
+    the menu or lame little flag icons.
+  - [Listening on port 80 at all.](/web/2019/10/24/https-by-default.html)
