@@ -74,7 +74,8 @@ code, pre.highlight {
   border: none;
   color: #fff;
   background-color: $background-color !important;
-  font-weight: bold;
+  border-radius: 0;
+  font-size: 12pt;
 }
 
 article.post {
@@ -103,7 +104,7 @@ div.post-content {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-
+  
   h2, h3, h4 {
     font-family: $base-font-family;
     text-shadow: $shadow !important;
@@ -117,6 +118,7 @@ div.post-content {
 
 blockquote {
   letter-spacing: -0.25px;
+  font-size: $base-font-size;
 }
 
 /* monokai */
